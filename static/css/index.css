@@ -112,6 +112,18 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.teaser-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.poster-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 
 /* Publication Content Styling */
 .publication-title {
@@ -306,6 +318,14 @@ body {
   font-size: 0.875rem;
   color: var(--text-light);
   font-style: italic;
+}
+
+.contact-emails {
+  display: block;
+  color: var(--text-light);
+  font-style: normal;
+  line-height: 1.7;
+  word-break: break-word;
 }
 
 /* Section Titles */
@@ -748,6 +768,3 @@ a:focus {
     box-shadow: none !important;
   }
 }
-
-
-
