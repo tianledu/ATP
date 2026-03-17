@@ -436,8 +436,8 @@ body {
 }
 
 .comparison-table-html .metric-label-shift span {
-  display: inline-block;
-  transform: translateX(0.32rem);
+  position: relative;
+  left: 0.42rem;
 }
 
 .staggered-subfigures {

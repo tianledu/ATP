@@ -84,19 +84,10 @@
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -115,8 +106,6 @@
   </script>
   
   <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
@@ -476,7 +465,7 @@
                     <th class="metric-label-shift"><span>PSNR&uarr;</span></th>
                     <th>SSIM&uarr;</th>
                     <th>LPIPS&darr;</th>
-                    <th class="metric-label-shift"><span>PSNR&uarr;</span></th>
+                    <th>PSNR&uarr;</th>
                     <th>SSIM&uarr;</th>
                     <th>LPIPS&darr;</th>
                     <th>PSNR&uarr;</th>
@@ -714,7 +703,7 @@
                     <th colspan="3" class="dataset-header">UHD-LL</th>
                   </tr>
                   <tr>
-                    <th>PSNR&uarr;</th>
+                    <th class="metric-label-shift"><span>PSNR&uarr;</span></th>
                     <th>SSIM&uarr;</th>
                     <th>LPIPS&darr;</th>
                     <th>PSNR&uarr;</th>
@@ -846,19 +835,41 @@
         <div class="item comparison-slide">
           <div class="comparison-table-wrap">
             <p class="comparison-table-label">Benchmark III</p>
-            <!-- Replace the MathJax array below with your LaTeX table code. -->
             <div class="comparison-table">
-\[
-\begin{array}{lcccc}
-\hline
-\textbf{Method} & \textbf{PSNR}\uparrow & \textbf{SSIM}\uparrow & \textbf{LPIPS}\downarrow & \textbf{Params}\downarrow \\
-\hline
-\text{Method A} & 23.08 & 0.861 & 0.158 & 12.4\text{M} \\
-\text{Method B} & 23.71 & 0.874 & 0.146 & 18.6\text{M} \\
-\textbf{ATP} & \textbf{24.29} & \textbf{0.889} & \textbf{0.131} & \textbf{4.8\text{M}} \\
-\hline
-\end{array}
-\]
+              <table class="comparison-table-html">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>PSNR&uarr;</th>
+                    <th>SSIM&uarr;</th>
+                    <th>LPIPS&darr;</th>
+                    <th>Params&darr;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Method A</td>
+                    <td>23.08</td>
+                    <td>0.861</td>
+                    <td>0.158</td>
+                    <td>12.4M</td>
+                  </tr>
+                  <tr>
+                    <td>Method B</td>
+                    <td>23.71</td>
+                    <td>0.874</td>
+                    <td>0.146</td>
+                    <td>18.6M</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ATP</strong></td>
+                    <td><strong>24.29</strong></td>
+                    <td><strong>0.889</strong></td>
+                    <td><strong>0.131</strong></td>
+                    <td><strong>4.8M</strong></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

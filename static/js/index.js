@@ -119,7 +119,7 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
     // Check for click events on the navbar burger icon
 
     var options = {
@@ -137,7 +137,7 @@ $(document).ready(function() {
     }
 
 	// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
+    bulmaCarousel.attach('.carousel', options);
 	
     bulmaSlider.attach();
     
@@ -153,4 +153,4 @@ $(document).ready(function() {
         }
     }
 
-})
+});
