@@ -125,6 +125,11 @@ $(document).ready(function() {
     var options = {
 		slidesToScroll: 1,
 		slidesToShow: 1,
+		breakpoints: [
+			{ changePoint: 480, slidesToShow: 1, slidesToScroll: 1 },
+			{ changePoint: 640, slidesToShow: 1, slidesToScroll: 1 },
+			{ changePoint: 768, slidesToShow: 1, slidesToScroll: 1 }
+		],
 		loop: true,
 		infinite: true,
 		autoplay: true,
@@ -138,5 +143,14 @@ $(document).ready(function() {
     
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
+
+    if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+        var comparisonCarousel = document.getElementById('comparison-carousel');
+        if (comparisonCarousel) {
+            window.MathJax.typesetPromise([comparisonCarousel]).catch(function(err) {
+                console.error('MathJax typeset failed:', err);
+            });
+        }
+    }
 
 })
