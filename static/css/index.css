@@ -295,7 +295,8 @@ body {
 
 .comparison-carousel .item {
   font-size: 1rem;
-  padding: 0.25rem 0;
+  padding: 0.25rem 2.8rem;
+  box-sizing: border-box;
 }
 
 .comparison-carousel {
@@ -311,6 +312,14 @@ body {
 .comparison-carousel .slider-navigation-next,
 .comparison-carousel .slider-navigation-previous {
   z-index: 3;
+}
+
+.comparison-carousel .slider-navigation-previous {
+  left: 0.35rem;
+}
+
+.comparison-carousel .slider-navigation-next {
+  right: 0.35rem;
 }
 
 .comparison-slide {
@@ -741,6 +750,18 @@ code {
   .results-carousel .item {
     margin: 0.5rem;
     padding: 0;
+  }
+
+  .comparison-carousel .item {
+    padding: 0.25rem 1.9rem;
+  }
+
+  .comparison-carousel .slider-navigation-previous {
+    left: 0.1rem;
+  }
+
+  .comparison-carousel .slider-navigation-next {
+    right: 0.1rem;
   }
   
   .teaser .hero-body {
